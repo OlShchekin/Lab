@@ -29,12 +29,14 @@ public class Bouquet<T extends Element> {
     public Element[] sortByFreshness(){
         Element[] temp;
         temp = FlavourStore.getElements();
-        Arrays.sort(temp, new Comparator<Element>() {
-
+        Arrays.sort(temp, new Comparator<Element>(){
             @Override
-            public int compare(Element o1, Element o2) {
-                return o1.getName().compareTo(o2.getName());
-            }});
+            public int compare(Element o1, Element o2){
+                return Integer.compare(o1.getFreshness(),o2.getFreshness());
+
+
+            }
+        });
         return temp;
     }
 
