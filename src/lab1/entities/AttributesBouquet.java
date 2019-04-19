@@ -8,7 +8,7 @@ public class AttributesBouquet extends Element {
     }
     @Override
     public  String toString(){
-
+        //no flavors
         return  super.toString();
     }
 
